@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Блог</title>
+	</head>
+	<body>
+		{% for news in news_list %}
+			<h3>{{ news.title }}</h3>
+			<p>{{ news.description }}</p>
+			{{ news.author }}
+		{% endfor %}
+	</body>
+</html>
