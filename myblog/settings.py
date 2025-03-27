@@ -42,7 +42,8 @@ INSTALLED_APPS = [
 		"channels",
 		"blog.apps.BlogConfig",
 		"news.apps.NewsConfig",
-		"chat"
+		"chat",
+		"messenger"
 ]
 
 MIDDLEWARE = [
@@ -75,6 +76,10 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "myblog.wsgi.application"
 ASGI_APPLICATION = "myblog.asgi.application"
+
+CHANNEL_LAYERS = {
+	"default": {"BACKEND": "channels.layers.InMemoryChannelLayer"}
+}
 
 
 # Database
